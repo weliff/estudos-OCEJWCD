@@ -1,4 +1,4 @@
-<@ page import="java.util.*">
+<%@ page import="java.util.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -9,10 +9,10 @@
 	<h1 style="text-align:center">Beer Recommendations JSP</h1>
 	<p>
 		<%
-			List styles = request.getAttribute("styles");
-			Iterator itarator = styles.itarator();
-			while(itarator.hasNext()) {
-				out.print("<br/>try: " + itarator.next());
+			List styles = (List) request.getAttribute("styles");
+			Iterator iterator = styles.iterator();
+			while(iterator.hasNext()) {
+				out.print("<br/>try: " + iterator.next());
 			}
 		%>
 	</p>
